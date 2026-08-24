@@ -109,6 +109,7 @@ const TEXTS = {
 
 // Image settings
 const IMAGES = {
+  logo: { src: '/images/favicon.png', fit: 'object-contain', zoom: 1, pos: 'object-center' },
   hero: { src: '/images/hero.png', fit: 'object-contain', zoom: 1, pos: 'object-center' },
   story: { src: '/images/story.png', fit: 'object-cover', zoom: 1.1, pos: 'object-top' },
   philosophy: { src: '/images/philosophy.png', fit: 'object-contain', zoom: 1, pos: 'object-center' },
@@ -151,28 +152,31 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
           
           {/* Logo */}
-          <a href="#" className="font-display font-black tracking-widest text-lg sm:text-xl text-white flex items-center gap-3 group">
-            <span className="w-9 h-9 rounded-lg bg-[#00C896] text-black font-extrabold flex items-center justify-center text-sm shadow-lg shadow-[#00C896]/20 group-hover:scale-105 transition-transform flex-shrink-0">
-              SH
+          <a href="#" className="font-display font-black text-white flex items-center gap-3 group flex-shrink-0">
+            <span className="w-9 h-9 rounded-full bg-[#00C896] flex items-center justify-center shadow-lg shadow-[#00C896]/20 group-hover:scale-105 transition-transform flex-shrink-0 overflow-hidden">
+              <img 
+                src={IMAGES.logo.src} 
+                className="w-full h-full object-cover rounded-full"
+              />
             </span>
-            <T textKey="brandName" className="uppercase tracking-widest text-sm sm:text-base font-extrabold" />
+            <T textKey="brandName" className="whitespace-nowrap uppercase text-[13px] tracking-[0.18em] font-extrabold" />
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center space-x-8 text-xs xl:text-sm font-semibold uppercase tracking-widest text-gray-300">
-            <a href="#about" className="hover:text-[#00C896] transition-colors py-1">Story</a>
-            <a href="#believe" className="hover:text-[#00C896] transition-colors py-1">What I Believe</a>
-            <a href="#built" className="hover:text-[#00C896] transition-colors py-1">What We Built</a>
-            <a href="#majority" className="hover:text-[#00C896] transition-colors py-1">The Reality</a>
-            <a href="#maps" className="hover:text-[#00C896] transition-colors py-1">MAPS System</a>
-            <a href="#lessons" className="hover:text-[#00C896] transition-colors py-1">Lessons</a>
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-[11px] xl:text-[12px] font-semibold uppercase tracking-[0.14em] text-gray-400 flex-shrink-0">
+            <a href="#about" className="hover:text-[#00C896] transition-colors py-1 whitespace-nowrap">Story</a>
+            <a href="#believe" className="hover:text-[#00C896] transition-colors py-1 whitespace-nowrap">What I Believe</a>
+            <a href="#built" className="hover:text-[#00C896] transition-colors py-1 whitespace-nowrap">What We Built</a>
+            <a href="#majority" className="hover:text-[#00C896] transition-colors py-1 whitespace-nowrap">The Reality</a>
+            <a href="#maps" className="hover:text-[#00C896] transition-colors py-1 whitespace-nowrap">MAPS System</a>
+            <a href="#lessons" className="hover:text-[#00C896] transition-colors py-1 whitespace-nowrap">Lessons</a>
           </div>
 
           {/* Right Action Button */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             <a 
               href="mailto:HELLO@SIDDHARTHAHAVELIA.COM"
-              className="px-5 py-2.5 rounded-lg bg-[#00C896] text-black font-black text-xs uppercase tracking-wider hover:bg-[#00E5AB] transition-all duration-300 shadow-xl shadow-[#00C896]/20 inline-block"
+              className="px-5 py-2 rounded-lg bg-[#00C896] text-black font-bold text-[11px] uppercase tracking-wider hover:bg-[#00E5AB] transition-all duration-300 shadow-lg shadow-[#00C896]/20 whitespace-nowrap"
             >
               Rise With Us
             </a>
