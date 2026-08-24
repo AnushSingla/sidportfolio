@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #A0A0A0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.section-banner-dark {
+  background-color: #080D0C;
+  color: #FFFFFF;
+  border-y: 1px solid rgba(0, 200, 150, 0.2);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #050505;
+  color: #F3F4F6;
+}
