@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build and cache outputs
+dist/
+.vite/
+.freebuff/
+
+# Logs
+*.log
+server-out.log
+server-err.log
+
+# Python cache / scripts
+__pycache__/
+
+# Binaries
+*.exe
