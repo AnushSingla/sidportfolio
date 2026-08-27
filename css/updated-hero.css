@@ -1,0 +1,249 @@
+/* ====================================================
+   SIDDHARTHA HAVELIA - Portfolio
+   Color: Black #000000 + Teal-Green #00C896
+   Font: Outfit (Display) + Inter (Body) + Playfair
+==================================================== */
+
+/* ===== TOKENS ===== */
+:root {
+  --bg: #000;
+  --bg-alt: #000;
+  --accent: #c8002e;
+  --accent: #e57300;
+  --accent-light: #ffb359;
+  --accent2: #f9d300;
+  --accent2-dim: rgba(249, 211, 0, 0.15);
+  --accent-dim: rgba(229, 115, 0, 0.06);
+  --white: #f5f5f5;
+  --subtle: #888888;
+  --muted: #aaa;
+  --text: #ccc;
+  --border: rgba(255,255,255,0.12);
+  --bg2: #0c0c0c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #000;
+  color: #f5f5f5;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 14px 2rem;
+  background: #111111;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.navbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #00e676;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: #00e676;
+}
+
+.nav-brand-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: #000;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 999;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 12px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--subtle);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: white;
+}
+
+/* Right button container */
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #00c9a7;
+  color: #000000;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  background: #00e577;
+  box-shadow: 0 4px 12px rgba(0,255,136,0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: #aaa;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  color: white;
+  border-color: #00c9a7;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .nav-cta {
+    display: none !important;
+  }
+  .navbar-label {
+    display: none !important;
+  }
+}

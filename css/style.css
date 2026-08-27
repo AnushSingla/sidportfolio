@@ -1,12 +1,12 @@
 /* ====================================================
    SIDDHARTHA HAVELIA — Portfolio
-   Color: Black #050505 + Teal-Green #00C896
+   Color: Black #000000 + Teal-Green #00C896
    Font: Outfit (Display) + Inter (Body) + Playfair (Serif)
 ==================================================== */
 
 /* ===== TOKENS ===== */
 :root {
-  --bg: #050505;
+  --bg: #000000;
   --bg-alt: #0A0A0A;
   --bg-card: #0F0F0F;
   --bg-card-h: #141414;
@@ -281,23 +281,7 @@ strong { color: var(--white); font-weight:600; }
   align-items: flex-end;
   min-height: 540px;
 }
-.hero-glow {
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 80%; height: 60%;
-  background: radial-gradient(ellipse at bottom right, rgba(0,200,150,0.12) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.hero-img {
-  position: relative;
-  width: 100%;
-  max-width: 560px;
-  object-fit: contain;
-  z-index: 2;
-  animation: float 7s ease-in-out infinite;
-  filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
-}
+/* Hero glow and animation removed for cleaner design */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50%        { transform: translateY(-14px); }

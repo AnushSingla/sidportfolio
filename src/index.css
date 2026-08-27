@@ -11,16 +11,25 @@
 }
 
 .section-banner-dark {
-  background-color: #080D0C;
-  color: #FFFFFF;
-  border-y: 1px solid rgba(0, 200, 150, 0.2);
+  background-color: transparent;
+  color: #00C896;
+  border: none;
   font-family: 'Outfit', sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-align: left;
+}
+
+/* Section separator */
+.section-sep {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 body {
-  background-color: #050505;
+  background-color: #000000;
   color: #F3F4F6;
 }
+
+
